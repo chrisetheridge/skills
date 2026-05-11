@@ -53,6 +53,10 @@ What this area owns.
 
 Important terms and definitions.
 
+## Responsibilities
+
+What each major package, app, module, or service owns.
+
 ## Product Areas
 
 Major directories, modules, or workflows.
@@ -69,10 +73,20 @@ Access rules, tenancy rules, or ownership boundaries.
 
 Repo-specific rules agents must follow.
 
+## Architectural Rules
+
+Layering, dependency direction, data ownership, adapter boundaries, or other design constraints that must be preserved.
+
+## Verification Commands
+
+Commands agents should run after changing this area.
+
 ## Boundaries
 
 What not to copy, inspect, or change without approval.
 ```
+
+Prefer concrete bullets over narrative. Good `CONTEXT.md` files should preserve the repo's terms of art and "do not violate this" rules, not just summarize what the code does.
 
 ## Agent Support Docs
 
