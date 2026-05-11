@@ -1,5 +1,5 @@
- ---
-name: setup-pre-commit-biome
+---
+name: setup-ts-pre-commit
 description: Set up Husky pre-commit hooks with lint-staged using Biome, plus type checking and tests. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time
 ---
 
