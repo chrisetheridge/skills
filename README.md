@@ -6,5 +6,5 @@ A collection of my personal skills.
 
 Sets up a standard pre-commit for Typescript repos with:
 - Biome for linting and formatting
-- Huksy for commit hooks
+- Husky for commit hooks
 - lint-staged for managing linting
