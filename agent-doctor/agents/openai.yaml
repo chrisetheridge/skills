@@ -1,0 +1,3 @@
+display_name: Agent Doctor
+short_description: Audit and improve a repo's agent-readiness.
+default_prompt: Audit this repository's agent-readiness. Inspect existing agent docs, context docs, issue tracker guidance, and setup paths. Report the highest-impact improvements first, then suggest the smallest concrete file changes.
