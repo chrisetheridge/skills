@@ -27,6 +27,10 @@ If the user did not provide one of these fields:
 
 Do not create paperwork for small obvious edits. A request like "fix the typo in README" can use an implicit contract: change only the typo, avoid unrelated edits, and complete when the typo is fixed.
 
+## Before Writing Code
+
+Once you have figured out the context of the task, show your approach to the user. Use the Task Format template below. Ask them to verify before making changes. The user may ask follow-up questions or ask you to make changes to your approach.
+
 ## Continuation Test
 
 Treat a request as a continuation when the conversation already has an active task goal and the new request modifies, extends, verifies, or fixes that same work.
