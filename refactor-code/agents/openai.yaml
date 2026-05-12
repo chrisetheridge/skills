@@ -1,0 +1,7 @@
+interface:
+  display_name: "Refactor Code"
+  short_description: "Refactor code safely in small verified steps"
+  default_prompt: "Use $refactor-code to refactor this code while preserving observable behavior."
+
+policy:
+  allow_implicit_invocation: true
