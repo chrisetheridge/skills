@@ -250,20 +250,7 @@ Then run any hook commands directly:
 
 Adapt for package manager.
 
-### 10. Commit
-
-Stage changed files and commit:
-
-```sh
-  git add package.json package-lock.json pnpm-lock.yaml yarn.lock bun.lockb biome.json .lintstagedrc.json .husky/pre-commit
-  git commit -m "Add pre-commit hooks with Husky and Biome"
-```
-
-Only stage lockfiles that exist and changed.
-
-The commit should trigger the hook. If it fails, fix the reported issue and retry.
-
-Notes
+Notes:
 
 - Husky runs Git hooks.
 - lint-staged limits formatting/linting to staged files.
