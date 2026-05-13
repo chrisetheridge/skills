@@ -30,6 +30,10 @@ Refactors working code for clarity without changing behavior. Use it when code h
 
 Creates a lightweight task contract for new agent work. Use it to make scope, non-goals, acceptance criteria, implementation notes, verification, and remaining risks explicit.
 
+### Refactor Code
+
+Refactors existing code without changing observable behavior. Use it to improve structure, reduce technical debt, split large functions, reduce duplication, or prepare code for a feature while preserving behavior.
+
 ### Setup TypeScript Pre-Commit
 
 Sets up a standard TypeScript pre-commit workflow with:
