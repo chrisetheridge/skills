@@ -9,7 +9,6 @@
   ],
   "pi": {
     "skills": [
-      "./agent-doctor",
       "./skills"
     ]
   }
