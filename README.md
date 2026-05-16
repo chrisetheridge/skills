@@ -42,3 +42,9 @@ Sets up a standard TypeScript pre-commit workflow with:
 - Husky for commit hooks
 - lint-staged for staged-file checks
 - type checking and tests when the repo already has scripts for them
+
+### To Spec
+
+Turns ADRs, technical decisions, architecture discussions, or brownfield refactor context into an engineering-focused spec.
+
+Use it for internal architecture migrations, API contracts, state ownership, provider boundaries, platform refactors, or technical work without product user stories.
