@@ -105,7 +105,9 @@ Examples:
 - bootstrap payload
 - migration compatibility adapter
 
-Tag contracts with [ADDED], [REMOVED], and [CHANGED] based on the change being introduced.
+<important>
+    You MUST tag contracts with [ADDED], [REMOVED], and [CHANGED] based on the change being introduced.
+</important>
 
 ## Migration Plan
 
