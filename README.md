@@ -48,3 +48,7 @@ Sets up a standard TypeScript pre-commit workflow with:
 Turns ADRs, technical decisions, architecture discussions, or brownfield refactor context into an engineering-focused spec.
 
 Use it for internal architecture migrations, API contracts, state ownership, provider boundaries, platform refactors, or technical work without product user stories.
+
+## Workflow
+
+![Workflow Diagram](docs/images/ai-engineering-workflow.png)
