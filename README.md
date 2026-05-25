@@ -18,6 +18,10 @@ pi install git:github.com/chrisetheridge/skills
 
 ## Skills
 
+### ADR
+
+Writes concise architecture decision records in the repository. Use it to record durable technical decisions, compare serious architectural options, or update/supersede an existing ADR.
+
 ### Agent Doctor
 
 Audits a repository's agent-readiness. Use it to improve agent docs, domain context, setup guidance, issue tracker notes, and skill installation guidance.

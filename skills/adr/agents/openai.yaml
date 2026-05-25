@@ -1,0 +1,7 @@
+interface:
+  display_name: "ADR"
+  short_description: "Write concise architecture decision records"
+  default_prompt: "Use $adr to write or update an architecture decision record for this technical decision."
+
+policy:
+  allow_implicit_invocation: true
