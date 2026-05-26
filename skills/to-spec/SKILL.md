@@ -64,7 +64,11 @@ State what this changes and why. Keep this to one or two paragraphs.
 
 ## Background
 
-Describe the current architecture, pain points, and relevant constraints. Link to ADRs or existing docs.
+Describe the current architecture, pain points, and relevant constraints. 
+
+<important>
+Always link to ADRs or existing docs. The user may refer to an ADR as context when using this skill, use that ADR. If none exist then do not link anything.
+</important>
 
 ## Decisions
 
