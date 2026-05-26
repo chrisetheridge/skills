@@ -9,6 +9,8 @@ metadata:
 
 Write decision records that preserve why a technical choice was made, what was decided, and what future agents must respect.
 
+When writing the ADR, always use context from the current session to understand and codify the decision. The user will often do a grilling session before writing the ADR, which will include valuable context.
+
 ## Core Rules
 
 - Record decisions, not essays. Keep ADRs short unless the decision has real complexity.
@@ -21,6 +23,7 @@ Write decision records that preserve why a technical choice was made, what was d
 - Prefer one decision per ADR. Split unrelated choices.
 - Include non-goals when the boundary matters.
 - Preserve the user's direct, implementation-oriented style. Avoid motivational or tutorial prose.
+- ADRs are meant to surface ambiguity and provide context for decisions made. Do NOT make up decisions yourself. If you cannot infer a decision then ask the user for clarity.
 
 ## Workflow
 
