@@ -1,5 +1,5 @@
 ---
-name: adr
+name: to-adr
 description: Write and maintain concise Architecture Decision Records that capture durable technical decisions in the repository. Use when the user asks for an ADR, architecture decision record, decision log, to record a technical decision, to compare architectural options, or to update/supersede an existing decision.
 metadata:
   short-description: Write concise architecture decision records
