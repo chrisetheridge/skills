@@ -1,11 +1,11 @@
 ---
 name: to-spec
-description: Turn ADRs, technical decisions, architecture discussions, or brownfield refactor context into an engineering-focused spec. Use when work has no product user stories, when converting ADRs into implementation-neutral specs, or when planning internal architecture migrations, API contracts, state ownership, provider boundaries, or platform refactors.
+description: Use when system behaviour must be agreed before implementation, work crosses components or interfaces, acceptance criteria matter, or technical decisions must become an implementation-ready specification.
 ---
 
 # To Spec
 
-Create an engineering spec from existing decisions and codebase context. Prefer this over `to-prd` when the work is technical architecture, brownfield migration, refactoring, platform infrastructure, API contracts, or internal developer experience.
+Create an implementation-ready engineering spec from settled requirements, existing decisions, and codebase context. Use it for substantial features as well as architecture, migrations, refactoring, platform infrastructure, API contracts, and internal developer experience.
 
 ## Process
 
@@ -26,7 +26,9 @@ Create an engineering spec from existing decisions and codebase context. Prefer 
 
 4. Draft the spec
    - Use the template below.
-   - Focus on contracts, ownership, migration phases, acceptance criteria, and verification.
+   - Describe current and required behaviour, flows, failure cases, contracts, ownership, acceptance criteria, and verification.
+   - Cover security, privacy, observability, compatibility, rollout, and migration only when relevant.
+   - Separate confirmed requirements, assumptions, and open questions.
    - Do not write implementation steps, issue breakdowns, or detailed code changes.
    - Include small code-shaped examples only when they define an interface or contract.
 
@@ -37,7 +39,8 @@ Create an engineering spec from existing decisions and codebase context. Prefer 
 
 6. Self-review
    - Check for placeholders, contradictions, vague ownership, and missing deletion criteria.
-   - Ensure each ADR decision appears in the spec or is explicitly out of scope.
+   - Ensure each relevant ADR decision appears in the spec or is explicitly out of scope.
+   - Ensure changed behaviour has externally verifiable acceptance criteria and an appropriate verification method.
    - Ensure the spec can feed `to-issues` without needing another design pass.
 
 ## Output Rules
@@ -61,6 +64,16 @@ Create an engineering spec from existing decisions and codebase context. Prefer 
 ## Goal
 
 State what this changes and why. Keep this to one or two paragraphs.
+
+## Requirements
+
+### Confirmed
+
+- Settled behaviour and constraints.
+
+### Assumptions
+
+- Unconfirmed assumptions that shaped this spec. Omit when empty.
 
 ## Background
 
@@ -92,9 +105,17 @@ List accepted decisions that shape the spec. Reference ADRs when available.
 
 Describe the existing data flow, ownership boundaries, modules, and integration points.
 
+## Current Behaviour
+
+Describe externally relevant behaviour that changes. Omit when the spec is purely structural.
+
 ## Target Architecture
 
 Describe the desired ownership model and data flow. Name the important modules, providers, APIs, contracts, and deletion boundaries.
+
+## Required Behaviour
+
+Describe user or system flows, including important success paths, failures, recovery, and edge cases. State what the system must not do where that boundary matters.
 
 ## Contracts
 
@@ -115,7 +136,7 @@ Examples:
 
 ## Migration Plan
 
-Only write this section of a migration plan is required. The user may mention if migration is required. Ask if it is ambiguous.
+Only write this section if a migration plan is required. Ask only when migration ambiguity would materially change the design.
 
 Break the migration into phases. Each phase should be independently reviewable and should reduce risk.
 
@@ -137,13 +158,21 @@ If applicable, list the conditions that allow old code, adapters, flags, or comp
 
 ## Acceptance Criteria
 
-- [ ] Observable completion criterion.
-- [ ] Observable completion criterion.
-- [ ] Observable completion criterion.
+- [ ] Externally observable or executable completion criterion.
+- [ ] Failure or edge-case criterion where relevant.
+- [ ] Compatibility or migration criterion where relevant.
 
 ## Testing Strategy
 
-Briefly describe the testing strategy. It does not need to be exhaustive.
+For each changed behaviour, identify the appropriate verification level: unit, integration, contract, end-to-end, type checking, compilation, or runtime observation.
+
+Cover critical success paths, failure behaviour, compatibility requirements, and regression risks. Prefer tests through public interfaces over implementation-detail tests.
+
+State any behaviour that cannot be verified automatically and how it will be validated instead. Do not prescribe individual test files unless their location is part of an established repository convention.
+
+## Operational Considerations
+
+Include security, privacy, observability, rollout, and compatibility requirements when relevant. Omit this section when none apply.
 
 ## Open Questions
 

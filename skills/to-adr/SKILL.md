@@ -1,6 +1,6 @@
 ---
 name: to-adr
-description: Write and maintain concise Architecture Decision Records that capture durable technical decisions in the repository. Use when the user asks for an ADR, architecture decision record, decision log, to record a technical decision, to compare architectural options, or to update/supersede an existing decision.
+description: Use when a durable technical decision must be recorded, especially when reversal is costly, multiple components are affected, meaningful alternatives existed, or future engineers will need its rationale.
 metadata:
   short-description: Write concise architecture decision records
 ---
@@ -24,6 +24,7 @@ When writing the ADR, always use context from the current session to understand 
 - Include non-goals when the boundary matters.
 - Preserve the user's direct, implementation-oriented style. Avoid motivational or tutorial prose.
 - ADRs are meant to surface ambiguity and provide context for decisions made. Do NOT make up decisions yourself. If you cannot infer a decision then ask the user for clarity.
+- If the choice is still exploratory, use `brainstorm` before writing an ADR.
 
 ## Workflow
 
@@ -103,3 +104,15 @@ Follow local convention first. Common statuses:
 - The decision can be captured as a short comment in a spec or task.
 - The code is a throwaway prototype.
 - The choice is still exploratory and no durable decision exists yet.
+
+## Decision Test
+
+An ADR is usually warranted when several of these are true:
+
+- Reversing the choice would be costly or disruptive.
+- The choice establishes a long-lived boundary, contract, or operational guarantee.
+- Multiple components or future changes are affected.
+- Meaningful alternatives were considered.
+- Future engineers will need to understand why the choice was made.
+
+Do not create an ADR merely because a task is large. Product requirements and routine implementation details belong in a spec or the code.
